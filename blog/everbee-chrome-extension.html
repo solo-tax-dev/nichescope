@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EverBee Chrome Extension: What It Does and What to Use Instead | NicheScope</title>
+<meta name="description" content="Thinking about the EverBee Chrome extension? Here's what it shows, what it can't verify, and a free alternative that only shows data you can actually see.">
+<link rel="canonical" href="https://nichescope.uk/blog/everbee-chrome-extension.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,450;0,9..144,550;0,9..144,650&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root { --bg:#101318; --panel:#1A1F29; --line:#2B3240; --line-soft:rgba(255,255,255,0.06);
+    --ink:#F0F2F5; --dim:#96A0B0; --dimmer:#6B7484; --accent:#F2A03D; --accent-hi:#FFB755; --accent-ink:#1A1206; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--bg); color:var(--ink); font-family:'IBM Plex Sans',sans-serif; line-height:1.7; -webkit-font-smoothing:antialiased; }
+  .wrap { max-width:760px; margin:0 auto; padding:0 24px; }
+  header { position:sticky; top:0; z-index:60; backdrop-filter:blur(12px); background:rgba(16,19,24,0.85); border-bottom:1px solid var(--line-soft); }
+  .headbar { display:flex; align-items:center; justify-content:space-between; padding:15px 24px; max-width:1140px; margin:0 auto; }
+  .brand { display:flex; align-items:center; gap:10px; font-weight:700; font-size:15.5px; color:var(--ink); text-decoration:none; }
+  .brand .mark { width:25px; height:25px; border-radius:50%; border:2.5px solid var(--accent); position:relative; flex-shrink:0; }
+  .brand .mark::after { content:""; position:absolute; width:9px; height:2.5px; background:var(--accent); bottom:-3px; right:-6px; transform:rotate(45deg); border-radius:2px; }
+  .btn { display:inline-flex; align-items:center; gap:8px; background:var(--accent); color:var(--accent-ink); font-weight:700; text-decoration:none; border-radius:10px; font-size:13.5px; padding:10px 18px; }
+  .btn:hover { background:var(--accent-hi); }
+  article { padding:56px 0 40px; }
+  article h1 { font-family:'Fraunces',serif; font-size:clamp(30px,4.4vw,44px); font-weight:550; line-height:1.1; letter-spacing:-0.5px; margin-bottom:14px; }
+  .post-meta { color:var(--dimmer); font-size:13.5px; margin-bottom:36px; font-family:'IBM Plex Mono',monospace; }
+  article h2 { font-family:'Fraunces',serif; font-size:26px; font-weight:550; margin:44px 0 14px; line-height:1.2; }
+  article h3 { font-size:18px; font-weight:700; margin:30px 0 10px; }
+  article p { color:var(--dim); margin-bottom:18px; font-size:16.5px; }
+  article p strong { color:var(--ink); }
+  article ul, article ol { color:var(--dim); margin:0 0 18px 22px; font-size:16.5px; }
+  article li { margin-bottom:8px; }
+  article a { color:var(--accent); }
+  .cta-box { background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:26px; margin:44px 0; }
+  .cta-box p { color:var(--ink); margin-bottom:16px; font-weight:600; }
+  .related-links { margin:44px 0; padding-top:28px; border-top:1px solid var(--line-soft); }
+  .related-links h3 { font-size:13px; text-transform:uppercase; letter-spacing:0.06em; color:var(--dimmer); margin-bottom:14px; font-weight:700; }
+  .related-links ul { list-style:none; margin:0; padding:0; }
+  .related-links li { margin-bottom:10px; font-size:15.5px; }
+  .related-links a { color:var(--accent); text-decoration:none; font-weight:600; }
+  .related-links a:hover { text-decoration:underline; }
+  footer { border-top:1px solid var(--line-soft); padding:32px 0; }
+  .foot-row { display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; font-size:13px; color:var(--dimmer); max-width:1140px; margin:0 auto; padding:0 24px; }
+  .foot-row a { color:var(--dimmer); text-decoration:none; }
+  .foot-row a:hover { color:var(--ink); }
+  .post-list { padding:56px 0; }
+  .post-list h1 { font-family:'Fraunces',serif; font-size:clamp(30px,4.4vw,44px); font-weight:550; margin-bottom:34px; }
+  .post-card { display:block; background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:24px 26px; margin-bottom:16px; text-decoration:none; transition:border-color .2s ease; }
+  .post-card:hover { border-color:rgba(242,160,61,0.35); }
+  .post-card h2 { color:var(--ink); font-size:19px; font-weight:700; margin-bottom:6px; }
+  .post-card p { color:var(--dim); font-size:14.5px; margin-bottom:8px; }
+  .post-card .date { color:var(--dimmer); font-size:12.5px; font-family:'IBM Plex Mono',monospace; }</style>
+</head>
+<body>
+<header>
+  <div class="headbar">
+    <a class="brand" href="https://nichescope.uk"><span class="mark"></span> NicheScope</a>
+    <a class="btn" href="https://chromewebstore.google.com/detail/shopscope-%E2%80%94-honest-etsy-m/imlnbhipnpmkdaodfgfcjnfeemhkfgid" target="_blank" rel="noopener">Add to Chrome — Free</a>
+  </div>
+</header>
+<main class="wrap">
+
+<article>
+  <div class="post-meta">2026-08-12 · NicheScope Blog</div>
+  <h1>EverBee Chrome Extension: What It Does and What to Use Instead</h1> <p>If you've been researching Etsy tools, you've almost certainly come across EverBee. It's one of the most widely talked-about Chrome extensions for Etsy sellers, and for good reason — it puts a layer of market data directly on top of your Etsy search results. But before you install it and start making product decisions based on what it shows you, it's worth understanding exactly what kind of data you're looking at.</p> <p>This article explains how the EverBee Chrome extension works, what its numbers actually represent, and how to think about that when you're validating a product idea or sizing up your competition.</p> <h2>What the EverBee Chrome Extension Does</h2> <p>EverBee is a browser extension that overlays estimated sales and revenue data onto Etsy search results and product listings. Once installed, you can browse Etsy and see figures alongside each listing — monthly sales estimates, total revenue estimates, and similar metrics.</p> <p>It also includes keyword research features, a product analytics dashboard, and tools for tracking competitors over time. For sellers who want a broad picture of a niche in one place, it's clearly designed with that workflow in mind.</p> <h2>The Core Issue: Where the Numbers Come From</h2> <p>Here's the thing that's easy to miss: Etsy does not publish sales figures. Etsy does not share revenue data with third-party developers through its API in the form of live transaction counts.</p> <p>The sales and revenue numbers shown by EverBee — and by most other Etsy research tools including eRank, Alura, and others — are <strong>estimates</strong>. They're calculated using models, proxies, and historical patterns. The tools themselves typically acknowledge this in their documentation, though it's not always front and centre when you're looking at a number on screen.</p> <p>That doesn't make those tools dishonest. Estimation has a legitimate place in research. But it does mean you need to know what you're working with. An estimated monthly revenue figure for a competitor's listing is not something you can verify. You can't cross-check it. You're making decisions based on a model's output, not observed reality.</p> <p>For some sellers — especially those making large inventory investments or pricing decisions — that distinction matters a lot.</p> <h2>What Data Is Actually Available on Etsy</h2> <p>When you look at an Etsy search results page or a product listing, several real data points are right there in front of you:</p> <ul> <li><strong>Price</strong> — exactly what the seller is charging</li> <li><strong>Review count</strong> — a genuine signal of transaction volume over time</li> <li><strong>Number of sales (when shown)</strong> — Etsy shows this on some listings</li> <li><strong>Listing age and recency signals</strong> — how long something has been live</li> <li><strong>Ad density</strong> — how many of the top results are paid placements</li> <li><strong>Bestseller badges and other on-page indicators</strong></li> </ul> <p>These are verifiable. You can see them yourself without any tool. They're not modelled or inferred — they're published by Etsy directly on the page.</p> <p>Review counts in particular are underrated as a research signal. A listing with a large number of reviews has demonstrably sold to many people. You can't fake that. It's not an estimate. And comparing review counts across the top results in a search gives you a genuine read on how competitive a niche is.</p> <h2>How EverBee Compares to Tools That Use Only On-Page Data</h2> <p>The choice between tools isn't really about which one is better in a general sense — it's about what you're trying to learn and how much uncertainty you're comfortable with.</p> <p>If you want estimated sales volume across a niche, EverBee is designed for that. If you want to understand what keywords are trending or track a specific competitor's listing over time, paid tools with their own data models can be useful.</p> <p>But if you want to understand the <strong>visible competitive landscape</strong> — how crowded is this niche, how high are review counts on the top listings, what are sellers charging, how much of the page is dominated by ads — you don't need estimated data to answer those questions. The answers are already on the page.</p> <p>That's the approach <a href='https://nichescope.uk'>NicheScope</a> takes. It's a free Chrome extension that reads only what's actually on the Etsy search results page — prices, review counts, ad density, listing count — and gives you a structured summary without inventing anything. No account needed, no estimated figures, and it runs on your device rather than sending your searches to a server.</p> <h2>Which Approach Is Right for Validating a New Product Idea</h2> <p>When you're deciding whether to make or source a new product, competition research usually comes down to a few core questions:</p> <ul> <li>Is anyone already selling this successfully?</li> <li>How hard will it be to get visibility?</li> <li>Is there room to compete on price, quality, or positioning?</li> </ul> <p>Estimated sales numbers can feel like they answer these questions directly, but they're answering a slightly different question: what does our model think this listing is doing? That might correlate well with reality, or it might not.</p> <p>On-page signals answer slightly different but arguably more useful questions: how many reviews do the top listings have (meaning, how much social proof would you be competing against), how competitive is the ad landscape, and what price range are buyers already shopping in.</p> <p>Neither approach is complete on its own. Experienced sellers often use both: on-page data for a quick, reliable first pass, and estimated data where they want a directional sense of volume even knowing it's approximate.</p> <h2>Using the EverBee Chrome Extension: Practical Tips</h2> <p>If you do use EverBee, a few things are worth keeping in mind:</p> <h3>Treat revenue estimates as directional, not precise</h3> <p>A listing estimated at a certain monthly revenue might be higher or lower in reality. Use the number to distinguish between 'this niche has real demand' and 'this niche looks quiet' rather than building a financial model around the specific figure.</p> <h3>Cross-reference with what you can verify</h3> <p>Before acting on an estimated number, look at the review count on the same listing. Does the review count feel consistent with the sales estimate? If EverBee is showing strong sales but the listing has very few reviews for its age, that's worth a second look.</p> <h3>Look at ad density alongside any estimates</h3> <p>High ad density on a search page means sellers are spending money to compete there. That's a concrete, verifiable signal that complements whatever the estimation tools are showing you.</p> <h3>Don't ignore the price range</h3> <p>What sellers are actually charging is right there on the page. Understanding the price distribution in a niche tells you where buyers' expectations are anchored — no estimation required.</p> <h2>A Free Alternative Worth Trying</h2> <p>If you're early in your research and want a quick, honest read on a niche before going deeper, <a href='https://chromewebstore.google.com/detail/shopscope-%E2%80%94-honest-etsy-m/imlnbhipnpmkdaodfgfcjnfeemhkfgid'>NicheScope is available free on the Chrome Web Store</a>. It doesn't require an account, doesn't estimate anything, and doesn't need special permissions. It just reads the page you're already looking at and gives you the numbers that are actually there.</p> <p>It won't tell you what a competitor is earning. But it will tell you how competitive their position looks based on what buyers can actually see — and that's often the more useful question when you're deciding whether a niche is worth entering.</p> <h2>The Bottom Line</h2> <p>The EverBee Chrome extension is a well-built tool that gives Etsy sellers estimated sales and revenue data in a convenient format. The key word is estimated — and knowing that helps you use it sensibly rather than treating its numbers as ground truth.</p> <p>For the data points that don't need estimating — prices, review counts, ad density — you can get those directly from the page, either by reading carefully yourself or by using a tool built around that approach. Either way, the best research combines what you can verify with what you're willing to treat as approximate, and keeps the two clearly separate in your thinking.</p> <h2>Frequently Asked Questions</h2> <h3>Is the EverBee Chrome extension free?</h3> <p>EverBee offers a free tier with limited features. Full access to its analytics and keyword research tools typically requires a paid subscription. Pricing and plan details are on the EverBee website and may change over time.</p> <h3>How accurate are EverBee's sales estimates?</h3> <p>EverBee uses a model to estimate sales and revenue, since Etsy doesn't publish that data directly. Accuracy varies and can't be independently verified for any given listing. The estimates are best used as rough directional indicators rather than precise figures.</p> <h3>What does EverBee actually show you?</h3> <p>When browsing Etsy search results or product pages, EverBee overlays estimated monthly sales, estimated revenue, keyword data, and other metrics. It also includes a dashboard for deeper research and competitor tracking.</p> <h3>Is there a free Etsy research tool that doesn't use estimated data?</h3> <p>Yes — NicheScope is a free Chrome extension that only shows data visible on the Etsy search results page: prices, review counts, listing count, and ad density. It doesn't estimate anything, requires no account, and runs entirely on your device.</p>
+  
+<div class="cta-box">
+  <p>Check any Etsy niche in one click — real prices, real review counts, real ad density. Free, no account.</p>
+  <a class="btn" href="https://chromewebstore.google.com/detail/shopscope-%E2%80%94-honest-etsy-m/imlnbhipnpmkdaodfgfcjnfeemhkfgid" target="_blank" rel="noopener">Add NicheScope to Chrome — Free</a>
+</div>
+  
+</article>
+</main>
+<footer>
+  <div class="foot-row">
+    <span>NicheScope — a small, honest tool for Etsy sellers.</span>
+    <span><a href="https://nichescope.uk/blog/">Blog</a> · <a href="https://solo-tax-dev.github.io/my-extensions-privacy/">Privacy Policy</a></span>
+  </div>
+</footer>
+</body>
+</html>

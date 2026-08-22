@@ -84,6 +84,9 @@
   .btn:hover { background: var(--accent-hi); transform: translateY(-1px); }
   .btn:active { transform: translateY(0); }
   .btn-nav { font-size: 13.5px; padding: 10px 18px; }
+  .nav-link { font-size: 13.5px; color: var(--dim); text-decoration: none; margin-right: 22px; transition: color .15s ease; }
+  .nav-link:hover { color: var(--ink); }
+  .nav-links { display: flex; align-items: center; }
   .btn-hero { font-size: 16px; padding: 16px 30px; box-shadow: 0 10px 34px rgba(212,162,78,0.25); }
   .btn-final { font-size: 16.5px; padding: 17px 34px; box-shadow: 0 10px 34px rgba(212,162,78,0.25); }
   .chrome-glyph { width: 18px; height: 18px; flex-shrink: 0; }
@@ -267,7 +270,11 @@
 <header>
   <div class="headbar">
     <div class="brand"><span class="mark"></span> NicheScope</div>
-    <a class="btn btn-nav" href="https://nichescope.uk/get" target="_blank" rel="noopener">Add to Chrome — Free</a>
+    <div class="nav-links">
+      <a class="nav-link" href="/etsy-fee-calculator/">Fee Calculator</a>
+      <a class="nav-link" href="/blog/">Blog</a>
+      <a class="btn btn-nav" href="https://nichescope.uk/get" target="_blank" rel="noopener">Add to Chrome — Free</a>
+    </div>
   </div>
 </header>
 
@@ -360,7 +367,7 @@
         <div class="problem-card reveal">
           <div class="pnum">b.</div>
           <h3>The price was a guess.</h3>
-          <p>Priced too high for the market, or raced to the bottom against sellers you never knew existed.</p>
+          <p>Priced too high for the market, or raced to the bottom against sellers you never knew existed. (Before you price anything, it's worth knowing exactly what <a href="/etsy-fee-calculator/" style="color:var(--accent)">Etsy's fees</a> take off the top.)</p>
         </div>
         <div class="problem-card reveal">
           <div class="pnum">c.</div>
@@ -501,7 +508,7 @@
 <footer>
   <div class="wrap foot-row">
     <span>NicheScope — a small, honest tool for Etsy sellers.</span>
-    <span><a href="/blog/">Blog</a> · <a href="https://solo-tax-dev.github.io/my-extensions-privacy/">Privacy Policy</a></span>
+    <span><a href="/etsy-fee-calculator/">Fee Calculator</a> · <a href="/blog/">Blog</a> · <a href="https://solo-tax-dev.github.io/my-extensions-privacy/">Privacy Policy</a></span>
   </div>
 </footer>
 

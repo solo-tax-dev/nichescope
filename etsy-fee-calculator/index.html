@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Etsy Fee Calculator (2026 Rates) — Free, No Account | NicheScope</title>
+<meta name="description" content="Work out exactly what Etsy takes from a sale: listing fee, transaction fee, payment processing, and Offsite Ads. Free calculator, updated for 2026 rates.">
+<link rel="canonical" href="https://nichescope.uk/etsy-fee-calculator/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="NicheScope">
+<meta property="og:title" content="Etsy Fee Calculator (2026 Rates) — Free, No Account">
+<meta property="og:description" content="Work out exactly what Etsy takes from a sale: listing fee, transaction fee, payment processing, and Offsite Ads. Free calculator, updated for 2026 rates.">
+<meta property="og:url" content="https://nichescope.uk/etsy-fee-calculator/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Etsy Fee Calculator (2026 Rates)">
+<meta name="twitter:description" content="Work out exactly what Etsy takes from a sale — listing, transaction, processing and Offsite Ads fees, free and instant.">
+<link rel="alternate" type="application/rss+xml" title="NicheScope Blog" href="https://nichescope.uk/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Etsy Fee Calculator",
+  "url": "https://nichescope.uk/etsy-fee-calculator/",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "publisher": { "@type": "Organization", "name": "NicheScope", "url": "https://nichescope.uk" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does Etsy actually take from a sale?",
+      "acceptedAnswer": { "@type": "Answer", "text": "On a typical US sale it's roughly 9.5% to 11% of the order once you add the $0.20 listing fee, the 6.5% transaction fee, and the 3% + $0.25 payment processing fee. If the sale came through Offsite Ads, add another 12% to 15% on top." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Etsy charge fees on shipping?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. The 6.5% transaction fee and the payment processing fee are both calculated on the total the buyer pays, which includes the shipping price and any gift wrap fee, not just the item price." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I avoid the Offsite Ads fee?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Only if your shop has made under $10,000 in the trailing 12 months — you can opt out in Shop Manager settings. Once a shop crosses that threshold, enrollment becomes mandatory and the rate drops from 15% to 12%, but it can no longer be switched off." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this calculator official Etsy data?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No — this tool applies Etsy's own published fee rates from etsy.com/legal/fees to numbers you enter, so you can see the total before you list. It is not affiliated with Etsy, and rates can change; always check Shop Manager for your account's exact charges." }
+    }
+  ]
+}
+</script>
+<style>
+  :root { --bg:#101318; --panel:#1A1F29; --line:#2B3240; --line-soft:rgba(255,255,255,0.06);
+    --ink:#F0F2F5; --dim:#96A0B0; --dimmer:#6B7484; --accent:#F2A03D; --accent-hi:#FFB755; --accent-ink:#1A1206;
+    --good:#7FCF9E; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--bg); color:var(--ink); font-family:'IBM Plex Sans',sans-serif; line-height:1.7; -webkit-font-smoothing:antialiased; }
+  .wrap { max-width:760px; margin:0 auto; padding:0 24px; }
+  header { position:sticky; top:0; z-index:60; backdrop-filter:blur(12px); background:rgba(16,19,24,0.85); border-bottom:1px solid var(--line-soft); }
+  .headbar { display:flex; align-items:center; justify-content:space-between; padding:15px 24px; max-width:1140px; margin:0 auto; }
+  .brand { display:flex; align-items:center; gap:10px; font-weight:700; font-size:15.5px; color:var(--ink); text-decoration:none; }
+  .brand .mark { width:25px; height:25px; border-radius:50%; border:2.5px solid var(--accent); position:relative; flex-shrink:0; }
+  .brand .mark::after { content:""; position:absolute; width:9px; height:2.5px; background:var(--accent); bottom:-3px; right:-6px; transform:rotate(45deg); border-radius:2px; }
+  .btn { display:inline-flex; align-items:center; gap:8px; background:var(--accent); color:var(--accent-ink); font-weight:700; text-decoration:none; border-radius:10px; font-size:13.5px; padding:10px 18px; border:none; cursor:pointer; font-family:inherit; }
+  .btn:hover { background:var(--accent-hi); }
+  main.wrap { padding:56px 0 40px; }
+  h1 { font-family:'Fraunces',serif; font-size:clamp(30px,4.4vw,44px); font-weight:550; line-height:1.1; letter-spacing:-0.5px; margin-bottom:14px; }
+  .intro { color:var(--dim); font-size:16.5px; margin-bottom:36px; max-width:60ch; }
+  .calc-panel { background:var(--panel); border:1px solid var(--line); border-radius:16px; padding:28px; margin-bottom:32px; }
+  .field-row { display:flex; gap:16px; margin-bottom:18px; flex-wrap:wrap; }
+  .field { flex:1; min-width:140px; }
+  .field label { display:block; font-size:12.5px; text-transform:uppercase; letter-spacing:0.05em; color:var(--dimmer); font-weight:700; margin-bottom:7px; }
+  .field .input-wrap { position:relative; }
+  .field .prefix { position:absolute; left:13px; top:50%; transform:translateY(-50%); color:var(--dim); font-size:15px; pointer-events:none; }
+  .field input[type=number] { width:100%; background:var(--bg); border:1px solid var(--line); color:var(--ink); border-radius:9px; padding:11px 13px 11px 26px; font-size:15.5px; font-family:inherit; }
+  .field input[type=number]:focus { outline:none; border-color:var(--accent); }
+  .field select { width:100%; background:var(--bg); border:1px solid var(--line); color:var(--ink); border-radius:9px; padding:11px 13px; font-size:15.5px; font-family:inherit; }
+  .field select:focus { outline:none; border-color:var(--accent); }
+  .toggle-row { display:flex; align-items:center; gap:10px; margin-top:6px; margin-bottom:6px; }
+  .toggle-row input[type=checkbox] { width:17px; height:17px; accent-color:var(--accent); cursor:pointer; }
+  .toggle-row label { font-size:14.5px; color:var(--dim); cursor:pointer; }
+  .ads-sub { margin-left:27px; margin-top:8px; display:none; }
+  .ads-sub.show { display:block; }
+  .ads-sub label { font-size:13.5px; color:var(--dimmer); display:flex; align-items:center; gap:8px; cursor:pointer; margin-bottom:4px; }
+
+  .results { border-top:1px solid var(--line-soft); margin-top:24px; padding-top:22px; }
+  .fee-line { display:flex; justify-content:space-between; padding:9px 0; font-size:15px; color:var(--dim); border-bottom:1px dashed var(--line-soft); }
+  .fee-line .amt { color:var(--ink); font-family:'IBM Plex Mono',monospace; }
+  .fee-line.total { border-bottom:none; padding-top:16px; margin-top:6px; border-top:1px solid var(--line); font-weight:700; }
+  .fee-line.total .amt { color:var(--accent); font-size:17px; }
+  .payout-box { display:flex; justify-content:space-between; align-items:center; background:rgba(127,207,158,0.08); border:1px solid rgba(127,207,158,0.25); border-radius:12px; padding:18px 20px; margin-top:20px; }
+  .payout-box .label { font-size:14px; color:var(--dim); }
+  .payout-box .value { font-family:'IBM Plex Mono',monospace; font-size:22px; font-weight:700; color:var(--good); }
+  .effective-rate { text-align:right; font-size:12.5px; color:var(--dimmer); margin-top:8px; }
+
+  .cta-box { background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:26px; margin:44px 0; }
+  .cta-box p { color:var(--ink); margin-bottom:16px; font-weight:600; }
+
+  section.info { margin:44px 0; }
+  section.info h2 { font-family:'Fraunces',serif; font-size:24px; font-weight:550; margin-bottom:14px; }
+  section.info p { color:var(--dim); font-size:15.5px; margin-bottom:14px; }
+  section.info a { color:var(--accent); }
+  .rate-table { width:100%; border-collapse:collapse; margin:18px 0; font-size:14.5px; }
+  .rate-table th, .rate-table td { text-align:left; padding:10px 12px; border-bottom:1px solid var(--line-soft); color:var(--dim); }
+  .rate-table th { color:var(--dimmer); text-transform:uppercase; font-size:11.5px; letter-spacing:0.05em; }
+  .rate-table td:first-child, .rate-table th:first-child { color:var(--ink); }
+
+  footer { border-top:1px solid var(--line-soft); padding:32px 0; }
+  .foot-row { display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; font-size:13px; color:var(--dimmer); max-width:1140px; margin:0 auto; padding:0 24px; }
+  .foot-row a { color:var(--dimmer); text-decoration:none; }
+  .foot-row a:hover { color:var(--ink); }
+</style>
+</head>
+<body>
+<header>
+  <div class="headbar">
+    <a class="brand" href="https://nichescope.uk"><span class="mark"></span> NicheScope</a>
+    <a class="btn" href="https://chromewebstore.google.com/detail/shopscope-%E2%80%94-honest-etsy-m/imlnbhipnpmkdaodfgfcjnfeemhkfgid" target="_blank" rel="noopener">Add to Chrome — Free</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <h1>Etsy Fee Calculator</h1>
+  <p class="intro">See exactly what Etsy takes from a sale — listing, transaction, payment processing and Offsite Ads — before you price anything. Free, instant, no account. Rates updated for 2026.</p>
+
+  <div class="calc-panel">
+    <div class="field-row">
+      <div class="field">
+        <label for="price">Item price</label>
+        <div class="input-wrap">
+          <span class="prefix" id="priceSymbol">$</span>
+          <input type="number" id="price" value="30" min="0" step="0.01">
+        </div>
+      </div>
+      <div class="field">
+        <label for="shipping">Shipping charged</label>
+        <div class="input-wrap">
+          <span class="prefix" id="shipSymbol">$</span>
+          <input type="number" id="shipping" value="5" min="0" step="0.01">
+        </div>
+      </div>
+      <div class="field">
+        <label for="qty">Quantity</label>
+        <input type="number" id="qty" value="1" min="1" step="1">
+      </div>
+    </div>
+
+    <div class="field-row">
+      <div class="field">
+        <label for="country">Your payment account country</label>
+        <select id="country">
+          <option value="US">United States (3% + $0.25)</option>
+          <option value="UK">United Kingdom (4% + £0.20)</option>
+          <option value="EU">Eurozone (4% + €0.30)</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="toggle-row">
+      <input type="checkbox" id="adsToggle">
+      <label for="adsToggle">This sale came through an Etsy Offsite Ad</label>
+    </div>
+    <div class="ads-sub" id="adsSub">
+      <label><input type="radio" name="adsTier" value="15" checked> Shop earned under $10,000 in the last 12 months — 15% fee</label>
+      <label><input type="radio" name="adsTier" value="12"> Shop earned $10,000+ in the last 12 months — 12% fee</label>
+    </div>
+
+    <div class="results" id="results"></div>
+  </div>
+
+  <div class="cta-box">
+    <p>Before you price a niche, check who you're actually competing with — real prices and review counts, not estimated sales numbers.</p>
+    <a class="btn" href="https://chromewebstore.google.com/detail/shopscope-%E2%80%94-honest-etsy-m/imlnbhipnpmkdaodfgfcjnfeemhkfgid" target="_blank" rel="noopener">Add NicheScope to Chrome — Free</a>
+  </div>
+
+  <section class="info">
+    <h2>How these fees are calculated</h2>
+    <p>Etsy charges a fixed <strong>$0.20 listing fee</strong> per item, whether or not it sells. On top of that, a <strong>6.5% transaction fee</strong> applies to the full order — item price plus shipping and any gift wrap — regardless of where you're based.</p>
+    <p>Payment processing is charged separately and varies by your payment account's country:</p>
+    <table class="rate-table">
+      <tr><th>Country</th><th>Processing fee</th></tr>
+      <tr><td>United States</td><td>3% + $0.25 per order</td></tr>
+      <tr><td>United Kingdom</td><td>4% + £0.20 per order</td></tr>
+      <tr><td>Eurozone</td><td>4% + €0.30 per order</td></tr>
+    </table>
+    <p>If a sale is attributed to an <strong>Offsite Ad</strong> (Etsy advertising your listing on Google, Facebook, Instagram or Pinterest), it replaces the transaction fee with a flat 15% charge — dropping to 12% once your shop has made $10,000 or more in the trailing 12 months, at which point enrollment also becomes mandatory rather than optional.</p>
+    <p>This tool applies <a href="https://www.etsy.com/legal/fees/" target="_blank" rel="noopener">Etsy's own published fee policy</a> to the numbers you enter. It isn't affiliated with Etsy, and Etsy can change rates at any time — always confirm against your own Shop Manager for exact figures.</p>
+  </section>
+</main>
+
+<footer>
+  <div class="foot-row">
+    <span>NicheScope — a small, honest tool for Etsy sellers.</span>
+    <span><a href="https://nichescope.uk/blog/">Blog</a> · <a href="https://solo-tax-dev.github.io/my-extensions-privacy/">Privacy Policy</a></span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var SYMBOLS = { US: '$', UK: '£', EU: '€' };
+  var PROCESSING = {
+    US: { pct: 0.03, flat: 0.25 },
+    UK: { pct: 0.04, flat: 0.20 },
+    EU: { pct: 0.04, flat: 0.30 },
+  };
+
+  var $ = function (id) { return document.getElementById(id); };
+  var priceEl = $('price'), shipEl = $('shipping'), qtyEl = $('qty'), countryEl = $('country');
+  var adsToggle = $('adsToggle'), adsSub = $('adsSub'), resultsEl = $('results');
+
+  function fmt(n, symbol) {
+    var sign = n < 0 ? '-' : '';
+    return sign + symbol + Math.abs(n).toFixed(2);
+  }
+
+  function calc() {
+    var price = parseFloat(priceEl.value) || 0;
+    var shipping = parseFloat(shipEl.value) || 0;
+    var qty = Math.max(1, parseInt(qtyEl.value, 10) || 1);
+    var country = countryEl.value;
+    var symbol = SYMBOLS[country];
+    $('priceSymbol').textContent = symbol;
+    $('shipSymbol').textContent = symbol;
+
+    var orderTotal = (price + shipping) * qty;
+    var listingFee = 0.20 * qty;
+
+    var usingAds = adsToggle.checked;
+    var adsRate = usingAds ? parseFloat(document.querySelector('input[name=adsTier]:checked').value) / 100 : 0;
+
+    var transactionFee, transactionLabel;
+    if (usingAds) {
+      transactionFee = orderTotal * adsRate;
+      transactionLabel = 'Offsite Ads fee (' + (adsRate * 100).toFixed(0) + '%, replaces transaction fee)';
+    } else {
+      transactionFee = orderTotal * 0.065;
+      transactionLabel = 'Transaction fee (6.5%)';
+    }
+
+    var proc = PROCESSING[country];
+    var processingFee = orderTotal * proc.pct + proc.flat;
+
+    var totalFees = listingFee + transactionFee + processingFee;
+    var payout = orderTotal - totalFees;
+    var effectiveRate = orderTotal > 0 ? (totalFees / orderTotal) * 100 : 0;
+
+    adsSub.classList.toggle('show', usingAds);
+
+    resultsEl.innerHTML =
+      '<div class="fee-line"><span>Order total (' + qty + (qty === 1 ? ' item' : ' items') + ' + shipping)</span><span class="amt">' + fmt(orderTotal, symbol) + '</span></div>' +
+      '<div class="fee-line"><span>Listing fee</span><span class="amt">-' + fmt(listingFee, symbol) + '</span></div>' +
+      '<div class="fee-line"><span>' + transactionLabel + '</span><span class="amt">-' + fmt(transactionFee, symbol) + '</span></div>' +
+      (usingAds ? '' : '<div class="fee-line"><span>Payment processing (' + (proc.pct * 100).toFixed(0) + '% + ' + symbol + proc.flat.toFixed(2) + ')</span><span class="amt">-' + fmt(processingFee, symbol) + '</span></div>') +
+      (usingAds ? '<div class="fee-line"><span>Payment processing (' + (proc.pct * 100).toFixed(0) + '% + ' + symbol + proc.flat.toFixed(2) + ')</span><span class="amt">-' + fmt(processingFee, symbol) + '</span></div>' : '') +
+      '<div class="fee-line total"><span>Total fees</span><span class="amt">-' + fmt(totalFees, symbol) + '</span></div>' +
+      '<div class="payout-box"><span class="label">You keep</span><span class="value">' + fmt(payout, symbol) + '</span></div>' +
+      '<div class="effective-rate">Effective fee rate: ' + effectiveRate.toFixed(1) + '%</div>';
+  }
+
+  [priceEl, shipEl, qtyEl, countryEl, adsToggle].forEach(function (el) {
+    el.addEventListener('input', calc);
+    el.addEventListener('change', calc);
+  });
+  document.querySelectorAll('input[name=adsTier]').forEach(function (el) {
+    el.addEventListener('change', calc);
+  });
+
+  calc();
+})();
+</script>
+</body>
+</html>
